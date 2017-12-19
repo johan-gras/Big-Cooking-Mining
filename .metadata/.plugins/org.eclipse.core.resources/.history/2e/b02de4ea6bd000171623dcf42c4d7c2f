@@ -1,0 +1,28 @@
+from scrapy.spiders import SitemapSpider
+
+class MySpider(SitemapSpider):
+    name = "scrap_sitemap" 
+    sitemap_urls = ['http://www.marmiton.org/wsitemap_1.xml']
+    sitemap_rules = [
+        ('/recettes/', 'parse_recettes'),
+    ]
+
+    def parse_recettes(self, response):
+        #Ingredients parsing
+        ingredients_selector = response.css(".recipe-ingredients__list__item")
+        ingredients = []
+        for ingredient in ingredients_selector:
+            ingredients.append({
+                'name' : ingredient.css(".ingredient::text").extract_first(),
+                'quantity' : ingredient.css(".recipe-ingredient-qt::text").extract_first(default='Empty')
+            })
+        
+        scraped_recipe = {
+            'title' : response.css("h1.main-title::text").extract_first(),
+            'preparation_time' : response.css(".title-2.recipe-infos__total-time__value::text").extract_first(),
+            'number_person' : response.css(".title-2.recipe-infos__quantity__value::text").extract_first(),
+            'ingredients' : ingredients
+        }
+        
+        yield scraped_recipe
+        
