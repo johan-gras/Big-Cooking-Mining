@@ -1,3 +1,6 @@
+#Cache Page Scrapy
+.scrapy/cache/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
