@@ -48,3 +48,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+Recipe_Player/.idea
+Recipe_Player/venv
+Recipe_Player/__pycache__
+*.json
+
