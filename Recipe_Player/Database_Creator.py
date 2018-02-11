@@ -89,7 +89,10 @@ class Database:
                  TITLE_RECIPE  VARCHAR(200),
                  LEVEL_RECIPE VARCHAR(100),  
                  NUMBER_OF_PERSON VARCHAR(50),
-                 RATING_RECIPE VARCHAR(100));
+                 RATING_RECIPE VARCHAR(100),
+                 TIME_TOTAL VARCHAR(100),
+                 TIME_PREPA VARCHAR(100),
+                 TIME_COOKING VARCHAR(100));
                  
                  CREATE TABLE INGREDIENT (
                  ID_INGREDIENT INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -100,25 +103,25 @@ class Database:
                  USERNAME VARCHAR(50),
                  BIRTHDAY_USER DATETIME,
                  MAIL_USER VARCHAR(100),
-                 WEIGHT_USER FLOAT,
-                 HEIGHT_USEER FLOAT,
+                 WEIGHT_USER VARCHAR(50),
+                 HEIGHT_USEER VARCHAR(50),
                  REGISTRATION_DATE DATETIME);
                  
                  CREATE TABLE UTENSIL (
                  ID_UTENSIL INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
                  NAME_UTENSIL VARCHAR(100),
-                 QUANTITY INT);
+                 QUANTITY VARCHAR(20));
                  
                  CREATE TABLE RECIPE_STEP (
                  ID_STEP INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-                 STPE_NUMBER INT,
+                 STPE_NUMBER VARCHAR(50),
                  DESCRIPTION_STEP VARCHAR(255));
                  
                  CREATE TABLE SPORT_ACTIVITY (
                  ID_ACTIVITY INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
                  NAME_ACTIVITY VARCHAR(100),
                  ACTIVITY_TYPE VARCHAR(100),
-                 FREQUENCY_ACTIVITY INT);"""
+                 FREQUENCY_ACTIVITY VARCHAR(50));"""
 
         self.cursor.execute(sql)
 
