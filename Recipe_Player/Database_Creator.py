@@ -242,7 +242,7 @@ class Database:
                     #Injection des ingredients
                     try:
                         # Execute the SQL command
-                        self.cursor.execute(sql_ingredient).encode('ascii', 'ignore')
+                        self.cursor.execute(sql_ingredient)
                         # Commit your changes in the database
                         self.db.commit()
 
@@ -266,7 +266,7 @@ class Database:
                     # Injection des utensils
                     try:
                         # Execute the SQL command
-                        self.cursor.execute(sql_utensils).encode('ascii', 'ignore')
+                        self.cursor.execute(sql_utensils)
                         # Commit your changes in the database
                         self.db.commit()
 
