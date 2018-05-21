@@ -49,9 +49,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 .idea
-Recipe_Player/venv
-__pycache__
-Recette_Scrap/spiders/images
+
+# Add
+venv/
+.scrapy/
+images/
 *.json
 *.jpg
-Recette_Scrap/spiders/__pycache__/sitemap_spider.cpython-35.pyc
+# *pyc
+#!Recipes-Player/data

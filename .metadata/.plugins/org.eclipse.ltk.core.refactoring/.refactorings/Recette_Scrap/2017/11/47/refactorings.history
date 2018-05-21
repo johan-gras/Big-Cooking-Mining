@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Recette_Scrap/spiders/sitemap_spider&apos; to &apos;sitemap_spider.py&apos;" description="Rename resource &apos;sitemap_spider&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="spiders/sitemap_spider" name="sitemap_spider.py" stamp="1511362957136" updateReferences="true"/>
-</session>
