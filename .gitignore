@@ -53,3 +53,5 @@ Recipe_Player/venv
 __pycache__
 Recette_Scrap/spiders/images
 *.json
+*.jpg
+Recette_Scrap/spiders/__pycache__/sitemap_spider.cpython-35.pyc
