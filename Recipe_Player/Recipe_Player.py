@@ -35,11 +35,8 @@ def user_command():
         db.build_db(json)
 
     # Vider la table recipe
-    elif command == "truncate_table_recipe":
-        db.truncate_table_recipe()
-
-    elif command == "build_table_ingredient":
-        db.build_table_ingredient(json)
+    elif command == "truncate_db":
+        db.truncate_db()
 
     # Appel au module stats
     elif command.find('stats ') != -1:
@@ -77,8 +74,7 @@ def main():
     print('Appuyer sur entré pour les faire défilé\n')
     print('"create_db" pour créer ou recrée la base')
     print('"build_db" pour remplir la base avec les recettes')
-    print('"truncate_table_recipe" pour vider la table recipe')
-    print('"build_table_ingredient" pour remplir la base avec les ingredient')
+    print('"truncate_db" pour supprimer la table recipe')
     print('"stats" pour le module de statistique')
     print('"recommender" pour le module de recommendation')
     print('"exit" pour fermé')
